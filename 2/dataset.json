@@ -1,0 +1,3881 @@
+{
+    "features": [
+      {
+        "feature_idx": 0,
+        "name": "id",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 1,
+        "name": "locale",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 2,
+        "name": "partition",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 3,
+        "name": "scenario",
+        "type": {
+          "names": [
+            "social",
+            "transport",
+            "calendar",
+            "play",
+            "news",
+            "datetime",
+            "recommendation",
+            "email",
+            "iot",
+            "general",
+            "audio",
+            "lists",
+            "qa",
+            "cooking",
+            "takeaway",
+            "music",
+            "alarm",
+            "weather"
+          ],
+          "_type": "ClassLabel"
+        }
+      },
+      {
+        "feature_idx": 4,
+        "name": "intent",
+        "type": {
+          "names": [
+            "datetime_query",
+            "iot_hue_lightchange",
+            "transport_ticket",
+            "takeaway_query",
+            "qa_stock",
+            "general_greet",
+            "recommendation_events",
+            "music_dislikeness",
+            "iot_wemo_off",
+            "cooking_recipe",
+            "qa_currency",
+            "transport_traffic",
+            "general_quirky",
+            "weather_query",
+            "audio_volume_up",
+            "email_addcontact",
+            "takeaway_order",
+            "email_querycontact",
+            "iot_hue_lightup",
+            "recommendation_locations",
+            "play_audiobook",
+            "lists_createoradd",
+            "news_query",
+            "alarm_query",
+            "iot_wemo_on",
+            "general_joke",
+            "qa_definition",
+            "social_query",
+            "music_settings",
+            "audio_volume_other",
+            "calendar_remove",
+            "iot_hue_lightdim",
+            "calendar_query",
+            "email_sendemail",
+            "iot_cleaning",
+            "audio_volume_down",
+            "play_radio",
+            "cooking_query",
+            "datetime_convert",
+            "qa_maths",
+            "iot_hue_lightoff",
+            "iot_hue_lighton",
+            "transport_query",
+            "music_likeness",
+            "email_query",
+            "play_music",
+            "audio_volume_mute",
+            "social_post",
+            "alarm_set",
+            "qa_factoid",
+            "calendar_set",
+            "play_game",
+            "alarm_remove",
+            "lists_remove",
+            "transport_taxi",
+            "recommendation_movies",
+            "iot_coffee",
+            "music_query",
+            "play_podcasts",
+            "lists_query"
+          ],
+          "_type": "ClassLabel"
+        }
+      },
+      {
+        "feature_idx": 5,
+        "name": "utt",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 6,
+        "name": "annot_utt",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 7,
+        "name": "worker_id",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 8,
+        "name": "slot_method",
+        "type": {
+          "feature": {
+            "slot": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "method": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "Sequence"
+        }
+      },
+      {
+        "feature_idx": 9,
+        "name": "judgments",
+        "type": {
+          "feature": {
+            "worker_id": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "intent_score": {
+              "dtype": "int8",
+              "_type": "Value"
+            },
+            "slots_score": {
+              "dtype": "int8",
+              "_type": "Value"
+            },
+            "grammar_score": {
+              "dtype": "int8",
+              "_type": "Value"
+            },
+            "spelling_score": {
+              "dtype": "int8",
+              "_type": "Value"
+            },
+            "language_identification": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          },
+          "_type": "Sequence"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "row_idx": 0,
+        "row": {
+          "id": "1",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 48,
+          "utt": "maak my wakker nege-uur v. m. op vrydag",
+          "annot_utt": "maak my wakker [time : nege-uur v. m.] op [date : vrydag]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "time",
+              "date"
+            ],
+            "method": [
+              "translation",
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "49",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 1,
+        "row": {
+          "id": "2",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 48,
+          "utt": "stel 'n alarm vir twee ure van nou af",
+          "annot_utt": "stel 'n alarm vir [time : twee ure van nou af]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "time"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "64",
+              "27",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 1, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 2,
+        "row": {
+          "id": "4",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 10,
+          "intent": 46,
+          "utt": "janneman stilte",
+          "annot_utt": "janneman stilte",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "45",
+              "40",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 3,
+        "row": {
+          "id": "5",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 10,
+          "intent": 46,
+          "utt": "stop",
+          "annot_utt": "stop",
+          "worker_id": "2",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "40",
+              "45"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 4,
+        "row": {
+          "id": "6",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 10,
+          "intent": 46,
+          "utt": "janneman onderbreek dit vir tien sekondes",
+          "annot_utt": "janneman onderbreek dit vir [time : tien sekondes]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "time"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "45",
+              "40",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [3, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 5,
+        "row": {
+          "id": "7",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 10,
+          "intent": 46,
+          "utt": "stop vir tien sekondes",
+          "annot_utt": "stop vir [time : tien sekondes]",
+          "worker_id": "2",
+          "slot_method": {
+            "slot": [
+              "time"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "45",
+              "40",
+              "49"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 6,
+        "row": {
+          "id": "9",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 1,
+          "utt": "maak die beligting bietjie meer warm hier",
+          "annot_utt": "maak die beligting bietjie meer [color_type : warm] hier",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "color_type"
+            ],
+            "method": [
+              "unchanged_translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "71",
+              "40",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 7,
+        "row": {
+          "id": "10",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 1,
+          "utt": "stel asseblief die beligting geskik vir lees",
+          "annot_utt": "stel asseblief die beligting [color_type : geskik vir lees]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "color_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 8,
+        "row": {
+          "id": "12",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 40,
+          "utt": "tyd om te slaap",
+          "annot_utt": "tyd om te slaap",
+          "worker_id": "7",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "27",
+              "20",
+              "40"
+            ],
+            "intent_score": [0, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 9,
+        "row": {
+          "id": "13",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 40,
+          "utt": "tyd om te slaap janneman",
+          "annot_utt": "tyd om te slaap janneman",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 10,
+        "row": {
+          "id": "15",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 40,
+          "utt": "skakel af die lig in die badkamer",
+          "annot_utt": "skakel af die lig in die [house_place : badkamer]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "20",
+              "40",
+              "64"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 11,
+        "row": {
+          "id": "16",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 31,
+          "utt": "olly verdof die ligte in die gang",
+          "annot_utt": "olly verdof die ligte in die [house_place : gang]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "27",
+              "20",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 3, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 12,
+        "row": {
+          "id": "18",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 40,
+          "utt": "skakel die ligte af in die slaapkamer",
+          "annot_utt": "skakel die ligte af in die [house_place : slaapkamer]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "35",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 13,
+        "row": {
+          "id": "20",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 1,
+          "utt": "stel die ligte na twintig persent",
+          "annot_utt": "stel die ligte [change_amount : na twintig persent]",
+          "worker_id": "60",
+          "slot_method": {
+            "slot": [
+              "change_amount"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "40",
+              "60"
+            ],
+            "intent_score": [1, 0, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 14,
+        "row": {
+          "id": "21",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 1,
+          "utt": "olly stel ligte tot twintig persent",
+          "annot_utt": "olly stel ligte [change_amount : tot twintig persent]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "change_amount"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "20",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 15,
+        "row": {
+          "id": "22",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 31,
+          "utt": "olly verdof die ligte in die kombuis",
+          "annot_utt": "olly verdof die ligte in die [house_place : kombuis]",
+          "worker_id": "60",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 16,
+        "row": {
+          "id": "23",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 31,
+          "utt": "verdof die ligte in die kombuis",
+          "annot_utt": "verdof die ligte in die [house_place : kombuis]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "20",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 17,
+        "row": {
+          "id": "25",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 34,
+          "utt": "janneman maak die woonstel skoon",
+          "annot_utt": "janneman maak die [house_place : woonstel] skoon",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 18,
+        "row": {
+          "id": "28",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 34,
+          "utt": "stofsuig die huis",
+          "annot_utt": "stofsuig die [house_place : huis]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "27",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 19,
+        "row": {
+          "id": "29",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 34,
+          "utt": "stofsuig die huis olly",
+          "annot_utt": "stofsuig die [house_place : huis] olly",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "45",
+              "20",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 0, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 20,
+        "row": {
+          "id": "32",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 34,
+          "utt": "stofsuig die matte",
+          "annot_utt": "stofsuig die [house_place : matte]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "house_place"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "24",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 21,
+        "row": {
+          "id": "33",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 2,
+          "intent": 32,
+          "utt": "kyk wanneer die vertoning begin",
+          "annot_utt": "kyk wanneer die vertoning begin",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "70"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 22,
+        "row": {
+          "id": "34",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "ek will weer na 'n koos kombuis liedjie luister",
+          "annot_utt": "ek will weer na 'n [artist_name : koos kombuis] liedjie luister",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "artist_name"
+            ],
+            "method": [
+              "localization"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "62",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 23,
+        "row": {
+          "id": "35",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "ek wil weer daardie musiek een speel",
+          "annot_utt": "ek wil weer daardie [media_type : musiek] een speel",
+          "worker_id": "5",
+          "slot_method": {
+            "slot": [
+              "media_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "60",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 24,
+        "row": {
+          "id": "36",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "kyk my motor is gereed",
+          "annot_utt": "kyk my motor is gereed",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "62",
+              "73",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 25,
+        "row": {
+          "id": "37",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "kyk of my skootrekenaar werk",
+          "annot_utt": "kyk of my skootrekenaar werk",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "74",
+              "24",
+              "73"
+            ],
+            "intent_score": [1, 0, 1],
+            "slots_score": [2, 2, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 26,
+        "row": {
+          "id": "38",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "is die helderheid van my skerm laag",
+          "annot_utt": "is die helderheid van my skerm laag",
+          "worker_id": "60",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "8",
+              "62"
+            ],
+            "intent_score": [0, 1, 1],
+            "slots_score": [0, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 27,
+        "row": {
+          "id": "39",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "ek moet liggingsdienste aan hê kan jy kyk",
+          "annot_utt": "ek moet liggingsdienste aan hê kan jy kyk",
+          "worker_id": "58",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "62",
+              "74",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 28,
+        "row": {
+          "id": "40",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "kyk die status van my krag verbruik",
+          "annot_utt": "kyk die status van my krag verbruik",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "40",
+              "12"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 0, 0],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 29,
+        "row": {
+          "id": "43",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "ek is nie moeg nie ek is eintlik gelukkig",
+          "annot_utt": "ek is nie moeg nie ek is eintlik gelukkig",
+          "worker_id": "7",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "73",
+              "74",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 30,
+        "row": {
+          "id": "44",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "ollie ek is nie moeg nie ek is eintlik gelukkig",
+          "annot_utt": "ollie ek is nie moeg nie ek is eintlik gelukkig",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "21",
+              "73",
+              "74"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 31,
+        "row": {
+          "id": "45",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 5,
+          "utt": "wat gaan aan",
+          "annot_utt": "wat gaan aan",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "74",
+              "73",
+              "24"
+            ],
+            "intent_score": [1, 1, 2],
+            "slots_score": [2, 1, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 32,
+        "row": {
+          "id": "48",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 5,
+          "intent": 0,
+          "utt": "vertel my die tyd in moskou",
+          "annot_utt": "vertel my die tyd in [place_name : moskou]",
+          "worker_id": "43",
+          "slot_method": {
+            "slot": [
+              "place_name"
+            ],
+            "method": [
+              "localization"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "27",
+              "40",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [2, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 33,
+        "row": {
+          "id": "49",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 5,
+          "intent": 38,
+          "utt": "se vir my die tyd g. m. t. plus vyf",
+          "annot_utt": "se vir my die tyd [time_zone : g. m. t. plus vyf]",
+          "worker_id": "73",
+          "slot_method": {
+            "slot": [
+              "time_zone"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "73",
+              "40",
+              "27"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 1, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 34,
+        "row": {
+          "id": "51",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "olly lys mees gegradeerde afleweringsopsies vir sjinese kos",
+          "annot_utt": "olly lys mees gegradeerde [order_type : afleweringsopsies] vir [food_type : sjinese] kos",
+          "worker_id": "17",
+          "slot_method": {
+            "slot": [
+              "order_type",
+              "food_type"
+            ],
+            "method": [
+              "translation",
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "8",
+              "27",
+              "62"
+            ],
+            "intent_score": [1, 2, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 2, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 35,
+        "row": {
+          "id": "52",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "mees gegradeerde aflewering opsies vir chinese kos",
+          "annot_utt": "mees gegradeerde [order_type : aflewering] opsies vir [food_type : chinese] kos",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "order_type",
+              "food_type"
+            ],
+            "method": [
+              "translation",
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "45",
+              "64"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 36,
+        "row": {
+          "id": "54",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "olly hoogste gegradeerde aflewerings opsies vir chinese kos",
+          "annot_utt": "olly hoogste gegradeerde [order_type : aflewerings] opsies vir [food_type : chinese] kos",
+          "worker_id": "73",
+          "slot_method": {
+            "slot": [
+              "order_type",
+              "food_type"
+            ],
+            "method": [
+              "translation",
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "27",
+              "40",
+              "8"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [2, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 37,
+        "row": {
+          "id": "55",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "ek wil kerrie as wegneem hê enige aanbevelings",
+          "annot_utt": "ek wil [food_type : kerrie] as wegneem hê enige aanbevelings",
+          "worker_id": "36",
+          "slot_method": {
+            "slot": [
+              "food_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "27",
+              "49",
+              "8"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 38,
+        "row": {
+          "id": "56",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "ek wil 'n bietjie kerrie hê om te gaan enige aanbevelings janneman",
+          "annot_utt": "ek wil 'n bietjie [food_type : kerrie] hê om te gaan enige aanbevelings janneman",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "food_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "64",
+              "40",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [2, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 39,
+        "row": {
+          "id": "57",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "vind my taiwannese wegneemetes rondom die waterfront",
+          "annot_utt": "vind my [food_type : taiwannese] [order_type : wegneemetes] rondom die [place_name : waterfront]",
+          "worker_id": "23",
+          "slot_method": {
+            "slot": [
+              "food_type",
+              "order_type",
+              "place_name"
+            ],
+            "method": [
+              "translation",
+              "translation",
+              "localization"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "45",
+              "64",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 40,
+        "row": {
+          "id": "60",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 52,
+          "utt": "stop sewe-uur v. m. alarm",
+          "annot_utt": "stop [time : sewe-uur v. m.] alarm",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "time"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "35",
+              "45",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 41,
+        "row": {
+          "id": "62",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 23,
+          "utt": "lys asseblief aktiewe alarms",
+          "annot_utt": "lys asseblief aktiewe alarms",
+          "worker_id": "37",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "40",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 42,
+        "row": {
+          "id": "65",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 4,
+          "intent": 22,
+          "utt": "wat gebeur vandag in rugby",
+          "annot_utt": "wat gebeur [date : vandag] in [news_topic : rugby]",
+          "worker_id": "64",
+          "slot_method": {
+            "slot": [
+              "news_topic",
+              "date"
+            ],
+            "method": [
+              "localization",
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 43,
+        "row": {
+          "id": "66",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "speel asseblief yesterday van die beatles",
+          "annot_utt": "speel asseblief [song_name : yesterday] van die [artist_name : beatles]",
+          "worker_id": "74",
+          "slot_method": {
+            "slot": [
+              "song_name",
+              "artist_name"
+            ],
+            "method": [
+              "unchanged",
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "12",
+              "74",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target|english",
+              "target|english",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 44,
+        "row": {
+          "id": "69",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "ek hou van rock musiek",
+          "annot_utt": "ek hou van [music_genre : rock] musiek",
+          "worker_id": "73",
+          "slot_method": {
+            "slot": [
+              "music_genre"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "18"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target|english",
+              "target|english"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 45,
+        "row": {
+          "id": "70",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "my gunsteling musiek groep is queen",
+          "annot_utt": "my gunsteling musiek groep is [artist_name : queen]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "artist_name"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 0, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target|english",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 46,
+        "row": {
+          "id": "72",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "begin musiek van nadine speel",
+          "annot_utt": "begin musiek van nadine speel",
+          "worker_id": "60",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "74",
+              "12"
+            ],
+            "intent_score": [1, 0, 0],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 47,
+        "row": {
+          "id": "73",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "speel asseblief my beste musiek",
+          "annot_utt": "speel asseblief my beste musiek",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "62",
+              "35"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 3, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 48,
+        "row": {
+          "id": "75",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "wie het die musiek wat nou speel gekomponeer",
+          "annot_utt": "wie het die musiek wat nou speel gekomponeer",
+          "worker_id": "39",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "62",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 49,
+        "row": {
+          "id": "76",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "wat is daardie die album is huidige musiek van",
+          "annot_utt": "wat is daardie die album is huidige musiek van",
+          "worker_id": "43",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "40",
+              "45"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 2, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 50,
+        "row": {
+          "id": "77",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "olly ek geniet regtig hierdie liedjie",
+          "annot_utt": "olly ek geniet regtig hierdie liedjie",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "27",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 0, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 51,
+        "row": {
+          "id": "78",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "die lied wat jy speel is wonderlik",
+          "annot_utt": "die lied wat jy speel is wonderlik",
+          "worker_id": "43",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "5"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 0, 0],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 52,
+        "row": {
+          "id": "79",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "dit is een van die beste liedjies vir my",
+          "annot_utt": "dit is een van die beste liedjies vir my",
+          "worker_id": "29",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "40",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 53,
+        "row": {
+          "id": "81",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 18,
+          "utt": "maak ligte helderder",
+          "annot_utt": "maak ligte helderder",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "20",
+              "62"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 54,
+        "row": {
+          "id": "82",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 18,
+          "utt": "verhoog asseblief die ligte voluit",
+          "annot_utt": "verhoog asseblief die ligte [change_amount : voluit]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "change_amount"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "20",
+              "40",
+              "45"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 55,
+        "row": {
+          "id": "83",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 34,
+          "utt": "het skakel die stofsuier robot aan",
+          "annot_utt": "het skakel die [device_type : stofsuier robot] aan",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "device_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "20",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 3, 4],
+            "spelling_score": [1, 1, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 56,
+        "row": {
+          "id": "84",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 8,
+          "intent": 34,
+          "utt": "skakel die skoonmaker robot aan",
+          "annot_utt": "skakel die [device_type : skoonmaker robot] aan",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "device_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "20",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 57,
+        "row": {
+          "id": "87",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 16,
+          "utt": "bestel asseblief soesji vir aandete",
+          "annot_utt": "bestel asseblief [food_type : soesji] vir [meal_type : aandete]",
+          "worker_id": "17",
+          "slot_method": {
+            "slot": [
+              "food_type",
+              "meal_type"
+            ],
+            "method": [
+              "unchanged",
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "12",
+              "27"
+            ],
+            "intent_score": [1, 2, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 1, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 58,
+        "row": {
+          "id": "88",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 16,
+          "utt": "haai ek wil hê jy moet 'n burger bestel",
+          "annot_utt": "haai ek wil hê jy moet 'n [food_type : burger] bestel",
+          "worker_id": "17",
+          "slot_method": {
+            "slot": [
+              "food_type"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "8",
+              "27"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 59,
+        "row": {
+          "id": "91",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 16,
+          "utt": "kan ek wegneem aandete bestel van romans",
+          "annot_utt": "kan ek [order_type : wegneem] [meal_type : aandete] bestel van [business_name : romans]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "order_type",
+              "meal_type",
+              "business_name"
+            ],
+            "method": [
+              "translation",
+              "translation",
+              "localization"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "21",
+              "27"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 3, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 60,
+        "row": {
+          "id": "92",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "doen biesmiellah wegneem etes",
+          "annot_utt": "doen [business_name : biesmiellah] [order_type : wegneem etes]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "business_name",
+              "order_type"
+            ],
+            "method": [
+              "localization",
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "8",
+              "49",
+              "27"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target|other",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 61,
+        "row": {
+          "id": "93",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 48,
+          "utt": "stel 'n wekker vir twaalf",
+          "annot_utt": "stel 'n wekker vir [time : twaalf]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "time"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "27",
+              "20"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 3, 4],
+            "spelling_score": [2, 1, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 62,
+        "row": {
+          "id": "94",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 48,
+          "utt": "stel 'n alarm veertig minute van nou af",
+          "annot_utt": "stel 'n alarm [time : veertig minute van nou af]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "time"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "27",
+              "45",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [1, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 63,
+        "row": {
+          "id": "95",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 16,
+          "intent": 48,
+          "utt": "stel alarm vir agtuur elke weeksdag",
+          "annot_utt": "stel alarm vir [time : agtuur] [general_frequency : elke weeksdag]",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "time",
+              "general_frequency"
+            ],
+            "method": [
+              "translation",
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "20",
+              "40",
+              "64"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 64,
+        "row": {
+          "id": "96",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 17,
+          "intent": 13,
+          "utt": "reën dit",
+          "annot_utt": "[weather_descriptor : reën] dit",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [
+              "weather_descriptor"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "15",
+              "73",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 65,
+        "row": {
+          "id": "97",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 17,
+          "intent": 13,
+          "utt": "gaan dit reën",
+          "annot_utt": "gaan dit [weather_descriptor : reën]",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [
+              "weather_descriptor"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "15",
+              "24",
+              "62"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 66,
+        "row": {
+          "id": "98",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 17,
+          "intent": 13,
+          "utt": "sneeu dit tans",
+          "annot_utt": "[weather_descriptor : sneeu] dit tans",
+          "worker_id": "17",
+          "slot_method": {
+            "slot": [
+              "weather_descriptor"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "15",
+              "27"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 67,
+        "row": {
+          "id": "101",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 17,
+          "intent": 13,
+          "utt": "wat is die week se weer",
+          "annot_utt": "wat is [date : die week se] weer",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "date"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "15",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 68,
+        "row": {
+          "id": "104",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 4,
+          "intent": 22,
+          "utt": "vertel my b. b. c. nuus",
+          "annot_utt": "vertel my [media_type : b. b. c.] nuus",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "media_type"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "24",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 69,
+        "row": {
+          "id": "105",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 4,
+          "intent": 22,
+          "utt": "wat is die nuss op b. b. c. nuus",
+          "annot_utt": "wat is die nuss op [media_type : b. b. c.] nuus",
+          "worker_id": "43",
+          "slot_method": {
+            "slot": [
+              "media_type"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [1, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 70,
+        "row": {
+          "id": "106",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 4,
+          "intent": 22,
+          "utt": "wat is e nuus se nuutste nuus",
+          "annot_utt": "wat is [media_type : e nuus] se nuutste nuus",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [
+              "media_type"
+            ],
+            "method": [
+              "localization"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "24",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 71,
+        "row": {
+          "id": "108",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "speel 'n liedjie waarvan ek hou",
+          "annot_utt": "speel 'n liedjie waarvan ek hou",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "3"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 72,
+        "row": {
+          "id": "110",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "speel daft punk",
+          "annot_utt": "speel [artist_name : daft punk]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "artist_name"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "73",
+              "46"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target|english"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 73,
+        "row": {
+          "id": "111",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "sit aan 'n bietjie coldplay",
+          "annot_utt": "sit aan 'n bietjie [artist_name : coldplay]",
+          "worker_id": "46",
+          "slot_method": {
+            "slot": [
+              "artist_name"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "62",
+              "60",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [3, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target|english",
+              "target|english",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 74,
+        "row": {
+          "id": "114",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 28,
+          "utt": "skommel hierdie speellys",
+          "annot_utt": "[player_setting : skommel] hierdie speellys",
+          "worker_id": "64",
+          "slot_method": {
+            "slot": [
+              "player_setting"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "60",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 75,
+        "row": {
+          "id": "116",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "wat speel nou",
+          "annot_utt": "wat speel nou",
+          "worker_id": "20",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "73",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 76,
+        "row": {
+          "id": "117",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "watter musiek is hierdie",
+          "annot_utt": "watter musiek is hierdie",
+          "worker_id": "64",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 77,
+        "row": {
+          "id": "118",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "sê my die kunstenaar van die song",
+          "annot_utt": "sê my die kunstenaar van die song",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "64",
+              "40",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 1, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target|english",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 78,
+        "row": {
+          "id": "119",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 25,
+          "utt": "maak my lag",
+          "annot_utt": "maak my lag",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "21",
+              "27",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 1],
+            "grammar_score": [4, 2, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 79,
+        "row": {
+          "id": "120",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 25,
+          "utt": "janneman laat my lag",
+          "annot_utt": "janneman laat my lag",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "74",
+              "35",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 80,
+        "row": {
+          "id": "121",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 25,
+          "utt": "vertel my n goeie grappie",
+          "annot_utt": "vertel my n [joke_type : goeie] grappie",
+          "worker_id": "69",
+          "slot_method": {
+            "slot": [
+              "joke_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "62",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 81,
+        "row": {
+          "id": "123",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 25,
+          "utt": "vertel my 'n grap",
+          "annot_utt": "vertel my 'n grap",
+          "worker_id": "15",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "62",
+              "73"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 82,
+        "row": {
+          "id": "125",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 25,
+          "utt": "alexa vertel vir my n grappie",
+          "annot_utt": "alexa vertel vir my n grappie",
+          "worker_id": "7",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "73",
+              "74"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 1, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 83,
+        "row": {
+          "id": "126",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 25,
+          "utt": "kikker my op",
+          "annot_utt": "kikker my op",
+          "worker_id": "29",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "62",
+              "74",
+              "24"
+            ],
+            "intent_score": [1, 1, 2],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 84,
+        "row": {
+          "id": "129",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 9,
+          "intent": 12,
+          "utt": "vertel my van vandag",
+          "annot_utt": "vertel my van [date : vandag]",
+          "worker_id": "73",
+          "slot_method": {
+            "slot": [
+              "date"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "62",
+              "73",
+              "38"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 85,
+        "row": {
+          "id": "130",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 16,
+          "utt": "bestel 'n pizza",
+          "annot_utt": "bestel 'n [food_type : pizza]",
+          "worker_id": "29",
+          "slot_method": {
+            "slot": [
+              "food_type"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "8",
+              "49",
+              "27"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 1, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 86,
+        "row": {
+          "id": "131",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 16,
+          "utt": "bestel vir my 'n boerie rolletjie van bo-kaap kombuis",
+          "annot_utt": "bestel vir my 'n [food_type : boerie rolletjie] van [business_name : bo-kaap kombuis]",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "food_type",
+              "business_name"
+            ],
+            "method": [
+              "translation",
+              "localization"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "45",
+              "40",
+              "64"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [0, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 87,
+        "row": {
+          "id": "133",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "wanneer kom my bestelling",
+          "annot_utt": "wanneer kom my bestelling",
+          "worker_id": "29",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "8",
+              "49",
+              "27"
+            ],
+            "intent_score": [1, 1, 0],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 88,
+        "row": {
+          "id": "134",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "hoe lank nog vir my wegneem ete",
+          "annot_utt": "hoe lank nog vir my [order_type : wegneem] ete",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "order_type"
+            ],
+            "method": [
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "8",
+              "49",
+              "27"
+            ],
+            "intent_score": [1, 1, 0],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 2],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 89,
+        "row": {
+          "id": "135",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 14,
+          "intent": 3,
+          "utt": "domino's aflewering status",
+          "annot_utt": "[business_name : domino's] [order_type : aflewering] status",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "business_name",
+              "order_type"
+            ],
+            "method": [
+              "unchanged",
+              "translation"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "49",
+              "8",
+              "27"
+            ],
+            "intent_score": [1, 1, 0],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 3],
+            "spelling_score": [2, 2, 1],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 90,
+        "row": {
+          "id": "136",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "wat speel nou",
+          "annot_utt": "wat speel nou",
+          "worker_id": "64",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "13"
+            ],
+            "intent_score": [1, 1, 2],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 91,
+        "row": {
+          "id": "137",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 57,
+          "utt": "sê vir my die liedjie se naam",
+          "annot_utt": "sê vir my die liedjie se naam",
+          "worker_id": "54",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "40",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 2, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 92,
+        "row": {
+          "id": "139",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "speel my jazz speel lys",
+          "annot_utt": "speel my [music_genre : jazz] speel lys",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "music_genre"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "35",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 1, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 93,
+        "row": {
+          "id": "140",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "begin my jazz speellys",
+          "annot_utt": "begin my [music_genre : jazz] speellys",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "music_genre"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "24",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 94,
+        "row": {
+          "id": "141",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "speel my gunsteling speellys",
+          "annot_utt": "speel my gunsteling speellys",
+          "worker_id": "17",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "60",
+              "62",
+              "13"
+            ],
+            "intent_score": [1, 1, 2],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 3, 2],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 95,
+        "row": {
+          "id": "142",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "dit is a goeie lied",
+          "annot_utt": "dit is a goeie lied",
+          "worker_id": "43",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "47",
+              "24",
+              "40"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [3, 4, 4],
+            "spelling_score": [1, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 96,
+        "row": {
+          "id": "143",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 7,
+          "utt": "ek hou nie daarvan nie",
+          "annot_utt": "ek hou nie daarvan nie",
+          "worker_id": "64",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "60",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [2, 1, 2],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 97,
+        "row": {
+          "id": "144",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "ek hou daarvan",
+          "annot_utt": "ek hou daarvan",
+          "worker_id": "2",
+          "slot_method": {
+            "slot": [],
+            "method": []
+          },
+          "judgments": {
+            "worker_id": [
+              "24",
+              "40",
+              "60"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 98,
+        "row": {
+          "id": "145",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 15,
+          "intent": 43,
+          "utt": "ek hou van jazz",
+          "annot_utt": "ek hou van [music_genre : jazz]",
+          "worker_id": "2",
+          "slot_method": {
+            "slot": [
+              "music_genre"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "40",
+              "64",
+              "24"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 99,
+        "row": {
+          "id": "146",
+          "locale": "af-ZA",
+          "partition": "train",
+          "scenario": 3,
+          "intent": 45,
+          "utt": "kan jy bietjie jazz speel",
+          "annot_utt": "kan jy bietjie [music_genre : jazz] speel",
+          "worker_id": "40",
+          "slot_method": {
+            "slot": [
+              "music_genre"
+            ],
+            "method": [
+              "unchanged"
+            ]
+          },
+          "judgments": {
+            "worker_id": [
+              "62",
+              "60",
+              "21"
+            ],
+            "intent_score": [1, 1, 1],
+            "slots_score": [1, 1, 1],
+            "grammar_score": [4, 4, 4],
+            "spelling_score": [2, 2, 2],
+            "language_identification": [
+              "target|english",
+              "target",
+              "target"
+            ]
+          }
+        },
+        "truncated_cells": []
+      }
+    ],
+    "num_rows_total": 11514,
+    "num_rows_per_page": 100,
+    "partial": false
+  }
